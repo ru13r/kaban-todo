@@ -8,8 +8,8 @@ function Meta({
   description = defaultMetaTags.description,
   meta = [],
   title,
-  image = defaultMetaTags.image,
-}: MetaProps) {
+}: //  image = defaultMetaTags.image,
+MetaProps) {
   const pageTitle = `${appTitle}${title ? ' | ' + title : ''}`;
 
   return (
@@ -32,10 +32,10 @@ function Meta({
           property: 'og:type',
           content: 'website',
         },
-        {
-          property: 'og:image',
-          content: image,
-        },
+        // {
+        //   property: 'og:image',
+        //   content: image,
+        // },
         {
           name: 'twitter:card',
           content: 'summary',
