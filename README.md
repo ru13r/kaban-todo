@@ -1,4 +1,4 @@
-# Progressive Player is here!
+# A Kanban Todo App!
 
 ## License
 
