@@ -35,7 +35,7 @@ function Notifier() {
       enqueueSnackbar(message, {
         ...options,
         onExited(event, key) {
-          // removen this snackbar from the store
+          // remove this snackbar from the store
           actions.remove(key);
           removeDisplayed(key);
         },

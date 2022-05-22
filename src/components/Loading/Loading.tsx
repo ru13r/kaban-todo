@@ -1,13 +1,5 @@
-import CircularProgress from '@mui/material/CircularProgress';
-
-import { FullSizeCenteredFlexBox } from '@/components/styled';
-
 function Loading() {
-  return (
-    <FullSizeCenteredFlexBox>
-      <CircularProgress />
-    </FullSizeCenteredFlexBox>
-  );
+  return <div>progress...</div>;
 }
 
 export default Loading;

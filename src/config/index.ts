@@ -2,11 +2,11 @@ import isMobile from '@/utils/is-mobile';
 
 import type { Notifications } from './types';
 
-const title = 'Progressive Player';
+const title = 'Kanban ToDo';
 
 const email = 'alexey.rodimov@gmail.com';
 
-const repository = 'https://github.com/ru13r/progressive-player';
+const repository = 'https://github.com/ru13r/kanban-todo';
 
 const messages = {
   app: {

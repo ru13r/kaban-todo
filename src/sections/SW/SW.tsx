@@ -1,8 +1,5 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import Alert from '@mui/material/Alert';
-import Button from '@mui/material/Button';
-
 import type { SnackbarKey } from 'notistack';
 import { useRegisterSW } from 'virtual:pwa-register/react';
 
@@ -32,7 +29,7 @@ function SW() {
       notificationsActions.push({
         options: {
           autoHideDuration: 4500,
-          content: <Alert severity="success">App is ready to work offline.</Alert>,
+          content: <p>App is ready to work offline.</p>,
         },
       });
     } else if (needRefresh) {
@@ -43,8 +40,8 @@ function SW() {
           persist: true,
           action: (
             <>
-              <Button onClick={() => updateServiceWorker(true)}>Reload</Button>
-              <Button onClick={close}>Close</Button>
+              <div onClick={() => updateServiceWorker(true)}>Reload</div>
+              <div onClick={close}>Close</div>
             </>
           ),
         },
