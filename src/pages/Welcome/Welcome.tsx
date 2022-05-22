@@ -1,19 +1,24 @@
+import KanbanContainer from '@/components/KanbanContainer';
 import Meta from '@/components/Meta';
+import PageContainer from '@/components/PageContainer';
 import useOrientation from '@/hooks/useOrientation';
+import useBuckets from '@/store/buckets';
 
-function Welcome() {
+const Welcome = () => {
   const isPortrait = useOrientation();
   // const width = isPortrait ? '40%' : '30%';
   // const height = isPortrait ? '30%' : '40%';
 
+  const [buckets] = useBuckets();
+
   return (
-    <>
-      <Meta title="Welcome" />
+    <PageContainer>
+      <Meta title="Welcome to Kanban-Todo" />
       <div className={'flex ' + isPortrait ? 'column' : 'row'}>
-        <p>Hello World</p>
+        <KanbanContainer buckets={buckets} />
       </div>
-    </>
+    </PageContainer>
   );
-}
+};
 
 export default Welcome;
